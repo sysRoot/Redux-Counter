@@ -20,10 +20,11 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => this.props.increment(this.props.count)}>
+                <button onClick={this.props.increment}>
                     +
-                </button>
-                <button onClick={() => this.props.decrement(this.props.count)}>
+                </button> 
+                                {/* if that doesn't work, try doing your adding/subtracting inside of the action creator itself, instead of the reducer. */}
+                <button onClick={this.props.decrement}>
                     -
                 </button>
                 {/* Uncomment these button tags if you got
